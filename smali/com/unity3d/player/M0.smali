@@ -1,0 +1,50 @@
+.class final Lcom/unity3d/player/M0;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field final synthetic a:Lcom/unity3d/player/UnityPlayer;
+
+
+# direct methods
+.method constructor <init>(Lcom/unity3d/player/UnityPlayer;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/unity3d/player/M0;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/unity3d/player/M0;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-virtual {v0}, Lcom/unity3d/player/UnityPlayer;->getFrameLayout()Landroid/widget/FrameLayout;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/unity3d/player/M0;->a:Lcom/unity3d/player/UnityPlayer;
+
+    invoke-static {v1}, Lcom/unity3d/player/UnityPlayer;->-$$Nest$fgetm_SplashScreen(Lcom/unity3d/player/UnityPlayer;)Lcom/unity3d/player/a/g;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
+
+    iget-object v0, p0, Lcom/unity3d/player/M0;->a:Lcom/unity3d/player/UnityPlayer;
+
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Lcom/unity3d/player/UnityPlayer;->-$$Nest$fputm_SplashScreen(Lcom/unity3d/player/UnityPlayer;Lcom/unity3d/player/a/g;)V
+
+    return-void
+.end method
